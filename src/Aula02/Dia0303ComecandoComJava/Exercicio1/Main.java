@@ -1,4 +1,4 @@
-package Exercicio1;
+package Aula02.Dia0303ComecandoComJava.Exercicio1;
 
 public class Main {
     public static void main(String[] args) {

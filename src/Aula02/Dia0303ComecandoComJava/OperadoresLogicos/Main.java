@@ -1,4 +1,4 @@
-package Dia0303ComecandoComJava.OperadoresLogicos;
+package Aula02.Dia0303ComecandoComJava.OperadoresLogicos;
 
 public class Main {
     public static void main(String[] args) {

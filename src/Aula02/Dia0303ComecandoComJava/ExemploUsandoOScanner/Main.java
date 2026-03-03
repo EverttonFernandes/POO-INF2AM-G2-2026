@@ -1,4 +1,4 @@
-package Dia0303ComecandoComJava.ExemploUsandoOScanner;
+package Aula02.Dia0303ComecandoComJava.ExemploUsandoOScanner;
 
 import java.util.Scanner;
 

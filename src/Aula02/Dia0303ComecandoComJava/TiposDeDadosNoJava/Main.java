@@ -1,4 +1,4 @@
-package Dia0303ComecandoComJava.TiposDeDadosNoJava;
+package Aula02.Dia0303ComecandoComJava.TiposDeDadosNoJava;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Dia2402IntroducaoAoPOO;
+package Aula01.Dia2402IntroducaoAoPOO;
 
 
 public class Main {
