@@ -15,15 +15,36 @@ public class PlayList {
     }
 
     public void removerMusicaDaPlayList(String musicaASerRemovidaDaPlaylist) {
-        // MANEIRA MAIS MANUAL DE REMOVER UMA MUSICA DE UMA LISTA DE MUSICAS!
-        for (int indice = 1; indice <= this.listaDeMusicasDaPlayList.size(); indice++) {
+        // ESSA LÓGICA É MAIS COMPLEXA, PORÉM GARANTE QUE CONSEGUIMOS ENCONTRAR A MUSICA NA PLAYLIST E REMOVER COM SUCESSO!
+        boolean encontrouAMusicaASerRemovidaDaPlayList = false;
+
+        for (int indice = 1; indice < this.listaDeMusicasDaPlayList.size(); indice++) {
             if (musicaASerRemovidaDaPlaylist.equals(this.listaDeMusicasDaPlayList.get(indice))) {
                 this.listaDeMusicasDaPlayList.remove(indice);
+                encontrouAMusicaASerRemovidaDaPlayList = true;
+                System.out.println("A musica " + musicaASerRemovidaDaPlaylist + " foi removida da playlist " + this.nomeDaPlayList);
+                break;
             }
         }
 
-        // MANEIRA MAIS SIMPLES DE REMOVER UMA MUSICA DE UMA LISTA DE MUSICAS!
+        if (encontrouAMusicaASerRemovidaDaPlayList == false) {
+            System.out.println("A musica " + musicaASerRemovidaDaPlaylist + " não foi encontrada na playlist " + this.nomeDaPlayList);
+        }
+
+        // Jeito mais simples de remover, porém SEM NENHUMA VALIDAÇÃO (SEM TER A CERTEZA QUE A MUSICA EXISTE E FOI REMOVIDA DA PLAYLIST)
         this.listaDeMusicasDaPlayList.remove(musicaASerRemovidaDaPlaylist);
+    }
+
+
+    public void exibirDetalhesDaPlayList() {
+        System.out.println("######### DETALHES DA PLAYLIST #########");
+        System.out.println("Nome da playlist: " + this.nomeDaPlayList);
+        System.out.println("Musicas da playlist: ");
+
+        for (String musicaAtual : this.listaDeMusicasDaPlayList) {
+            System.out.println("- " + musicaAtual);
+        }
+
     }
 
 }
